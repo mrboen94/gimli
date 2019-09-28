@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="favicon.png" />
+    <title>Mathias Bøe</title>
+    <style media="screen" type="text/css">
+        html {
+            font-family: Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        body {
+            background: url("./stifi.png");
+            background-attachment: fixed; 
+            background-size: cover;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .container {
+            width: 40rem;
+            height: 20rem;
+            margin-top: 15rem;
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+            background: inherit;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            background: inherit;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 1000px 1000px rgba(31, 31, 31, 0.726);
+            filter: blur(13px);
+            margin: -20px;
+        }
+
+        .favorites-list {
+            text-align: center;
+            width: 10rem;
+            margin: 2rem;
+        }
+    
+        .search {
+            margin-top: 2rem;
+            width: 30rem;
+            padding: 0.5rem;
+            border: 1px solid #bbc2cf;
+        }
+    
+        .search-box {
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0);
+            color: #bbc2cf;
+            border: none;
+        }
+    
+        .search-box:focus {
+            outline: none;
+        }
+    
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    
+        ul > li > p {
+            font-weight: bold;
+            text-align: left;
+            border-bottom: 1px solid #bbc2cf;
+            padding-right: 100%;
+        }
+    
+        ul > li > p > a {
+            color: #bbc2cf;
+            outline: none;
+    
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        
+        ul > li > a {
+            color: #bbc2cf;
+            outline: none;
+    
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.5rem;
+        }
+    
+        ul > li > a:hover {
+            color: #222222;
+            background-color: #51afef;
+        }
+    
+        /* webkit compat */
+        .container {
+            display: -webkit-flex;
+            -webkit-flex-direction: column;
+            -webkit-align-items: center;
+            -webkit-justify-content: center;
+        }
+    
+        .favorites {
+            display: -webkit-flex;
+            -webkit-flex-direction: row;
+        }
+
+    </style>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <form method="get" action="https://duckduckgo.com/?">
+                <input class="search-box" name="q" type="text" placeholder="ddg search" autofocus />
+            </form>
+        </div>
+
+        <div class="favorites">
+        
+            <div class="favorites-list">
+                <ul>
+                    <li>
+                        <p><a>vcs</a></p>
+                    </li>
+                    <li><a href="https://www.github.com">github</a></li>
+                    <li><a href="https://www.gitlab.com">gitlab</a></li>
+                    <li><a href="https://git.internbank.no/dashboard">bitbucket</a></li>
+                </ul>
+            </div>
+        
+            <div class="favorites-list">
+                <ul>
+                    <li>
+                        <p><a>news</a></p>
+                    </li>
+                    <li><a href="https://news.ycombinator.com">hacker news</a></li>
+                    <li><a href="https://nrk.no">nrk</a></li>
+                    <li><a href="https://www.nrk.no/sognogfjordane">nrk sogn og fjordane</a></li>
+                </ul>
+            </div>
+        
+            <div class="favorites-list">
+                <ul>
+                    <li>
+                        <p><a>reddit</a></p>
+                    </li>
+                    <li><a href="https://old.reddit.com/me/m/fun/">fun</a></li>
+                    <li><a href="https://old.reddit.com/me/m/android/">android</a></li>
+                    <li><a href="https://old.reddit.com/me/m/compdev/">dev</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
